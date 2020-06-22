@@ -31,8 +31,8 @@ Things you may want to cover:
 |password|string|null: faulse|
 
 ### Association
-has_many: groups, through: :groups_users
-has_many: messages, through: :groups_messages
+has_many: groups
+has_many: messages
 
 
 ## groupsテーブル
@@ -41,8 +41,9 @@ has_many: messages, through: :groups_messages
 |name|string|null: faulse|
 
 ### Association
-has_many: users, through: groups_users
-has_many: messages, through: groups_messages
+has_many: users
+has_many: messages
+has_many: groups_users
 
 
 ## groups_usersテーブル
@@ -59,11 +60,12 @@ belongs_to: group
 ## messagesテーブル
 |column|Type|Options|
 |------|----|-------|
-|text|text|null: faulse|
+|text|text| |
+|image|string| |
 |user_id|integer|null: faulse, foreign_key: true|
 |group_id|integer|null: faulse, foreign_key: true|
 
 ### Association
 belongs_to :user
-belongs_to :groups
+belongs_to :group
 
