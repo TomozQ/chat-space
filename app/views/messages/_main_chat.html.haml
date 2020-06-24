@@ -1,4 +1,12 @@
 .chat-main
-  .group-info
-  .message-list
-  .message-form
+  .chat-main__group-info
+    .chat-main__group-info__contents
+      .chat-main__group-info__contents__group-name
+        test
+      .chat-main__group-info__contents__member
+        Member : masa
+    .chat-main__group-info__btn-box
+      = link_to "#", class: "chat-main__group-info__btn-box__btn-edit" do
+        Edit
+  .chat-main__message-list
+  .chat-main__message-form
