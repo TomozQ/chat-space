@@ -4,7 +4,7 @@
       .side-bar__user-name__top-items__name
         = current_user.name
       .side-bar__user-name__top-items__icon
-        = link_to '#' do
+        = link_to new_group_path() do
           = icon('far', 'edit', class: 'edit')
         = link_to edit_user_path(current_user) do
           = icon('fa', 'cog', class: 'cog')
@@ -12,10 +12,11 @@
   .side-bar__group-list
     .side-bar__group-list__index
       .side-bar__group-list__index__group-name
-        aaaaaa
-      .side-bar__group-list__index__latest-message
-        まだメッセージはありません。
-      .side-bar__group-list__index__group-name
-        bbbbbb
-      .side-bar__group-list__index__latest-message
-        まだメッセージはありません。    
+        -current_user.groups.each do |group|
+          .side-bar__group-list__index__group-name__group-link
+            =link_to '#' do
+              .side-bar__group-list__index__group-name__group-link__name
+                =group.name
+              .side-bar__group-list__index__group-name__group-link__latest-message
+                まだメッセージはありません。
+      
