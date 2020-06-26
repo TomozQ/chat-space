@@ -20,8 +20,16 @@
       &__icon{
         width: 60px;
         text-align: right;
+        a{
+          text-decoration: none;
+        }
         .edit{
           font-weight: bold;
+          color:#fff;
+        }
+        .cog{
+          font-weight: bold;
+          color: #fff;
         }
       }
     }
