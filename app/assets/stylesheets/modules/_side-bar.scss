@@ -42,12 +42,24 @@
     &__index{
       width: 260px;
       &__group-name{
-        font-size: 15px;
-        margin: 20px 0 5px 0;
+
+        &__group-link{
+          a{
+            color: #fff;
+            text-decoration: none;
+          }
+          &__name{
+            font-size: 15px;
+            margin: 20px 0 5px 0;
+          }
+          &__latest-message{
+            font-size: 11px;
+            margin-bottom: 40px;
+          }
+        }
       }
       &__latest-message{
-        font-size: 11px;
-        margin-bottom: 40px;
+        
       }
     }
   }
