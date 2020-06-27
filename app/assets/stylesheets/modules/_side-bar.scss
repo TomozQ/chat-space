@@ -39,6 +39,7 @@
     height: calc(100vh - 100px);
     display: flex;
     justify-content: center;
+    overflow: scroll;
     &__index{
       width: 260px;
       &__group-name{
