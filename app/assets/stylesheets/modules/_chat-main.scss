@@ -39,6 +39,7 @@
   &__message-list{
     background-color: #fafafa;
     height: calc(100vh - 100px - 90px);
+    overflow: scroll;
     &__contents{
       margin-left: 40px;
       &__content{
@@ -61,54 +62,59 @@
       color: #434a54;
       margin-bottom: 46px;
     }
+    
   }
   &__message-form{
     background-color: #d2d2d2;
-    height: 90px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    &__contents{
-      height: 50px;
-      width: 100%;
-      margin-left: 40px;
-      margin-right: 15px;
+    &__Form{
+      height: 90px;
       display: flex;
-      position: relative;
-      background-color: #fff;
-      input{
-        padding-left: 10px;
+      justify-content: space-between;
+      align-items: center;
+      &__contents{
+        height: 50px;
         width: 100%;
-        border: none;
+        margin-left: 40px;
+        margin-right: 15px;
+        display: flex;
+        position: relative;
+        background-color: #fff;
+        &__message{
+          position: absolute;
+          padding-left: 10px;
+          height: 100%;
+          width: 100%;
+          border: none;
+        }
+        &__imgbox{
+          position: absolute;
+          line-height: 50px;
+          font-size: 25px;
+          right: 10px;
+          &__label{
+            cursor: default;
+            &__icon{
+
+            }
+            &__file-field{
+              display: none;
+            }
+          }
+        
+        }
       }
-      &__message{
-        position: absolute;
-      }
-      &__imgbox{
-        position: absolute;
+      &__btn-send{
+        text-decoration: none;
+        color: #fff;
+        font-size: 16px;
         line-height: 50px;
-        font-size: 25px;
-        right: 10px;
-        label{
-          cursor: default;
-        }
-        input{
-          display: none;
-        }
+        background-color: #38aef0;
+        border: none;
+        padding: 0 30px;
+        display: block;
+        margin-right: 40px;
       }
-    
+    }
       
-    }
-    &__btn-send{
-      text-decoration: none;
-      color: #fff;
-      font-size: 16px;
-      line-height: 50px;
-      background-color: #38aef0;
-      border: none;
-      padding: 0 30px;
-      display: block;
-      margin-right: 40px;
-    }
   }
 }
