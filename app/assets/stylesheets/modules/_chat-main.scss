@@ -40,8 +40,10 @@
     background-color: #fafafa;
     height: calc(100vh - 100px - 90px);
     overflow: scroll;
+    padding-left: 40px;
+    padding-bottom: 46px;
     &__contents{
-      margin-left: 40px;
+
       &__content{
         padding: 35px 0 12px 0;
         display: flex;
@@ -60,7 +62,6 @@
     &__message{
       font-size: 14px;
       color: #434a54;
-      margin-bottom: 46px;
     }
     
   }
