@@ -62,6 +62,7 @@ $(function(){
         //メッセージが入ったHTMLに、入れ物ごと追加
         $('.chat-main__message-list').append(insertHTML);
         $('.chat-main__message-list').animate({ scrollTop: $('.chat-main__message-list')[0].scrollHeight});
+        $('.chat-main__message-form__Form__btn-send').prop('disabled', false);
       }
     })
     .fail(function() {
